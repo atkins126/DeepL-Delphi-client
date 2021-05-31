@@ -10,6 +10,68 @@ With a developper access available at https://www.deepl.com/pro#developer we can
 
 This repository contains library and sample projects for Delphi users. To use it you need an account and an API key from DeepL.
 
+## Managed languages
+
+According to https://www.deepl.com/docs-api/translating-text/ then From / To languages are :
+
+### Source languages
+
+"BG" - Bulgarian
+"CS" - Czech
+"DA" - Danish
+"DE" - German
+"EL" - Greek
+"EN" - English
+"ES" - Spanish
+"ET" - Estonian
+"FI" - Finnish
+"FR" - French
+"HU" - Hungarian
+"IT" - Italian
+"JA" - Japanese
+"LT" - Lithuanian
+"LV" - Latvian
+"NL" - Dutch
+"PL" - Polish
+"PT" - Portuguese (all Portuguese varieties mixed)
+"RO" - Romanian
+"RU" - Russian
+"SK" - Slovak
+"SL" - Slovenian
+"SV" - Swedish
+"ZH" - Chinese
+
+### Destination languages
+
+"BG" - Bulgarian
+"CS" - Czech
+"DA" - Danish
+"DE" - German
+"EL" - Greek
+"EN-GB" - English (British)
+"EN-US" - English (American)
+"EN" - English (unspecified variant for backward compatibility; please select EN-GB or EN-US instead)
+"ES" - Spanish
+"ET" - Estonian
+"FI" - Finnish
+"FR" - French
+"HU" - Hungarian
+"IT" - Italian
+"JA" - Japanese
+"LT" - Lithuanian
+"LV" - Latvian
+"NL" - Dutch
+"PL" - Polish
+"PT-PT" - Portuguese (all Portuguese varieties excluding Brazilian Portuguese)
+"PT-BR" - Portuguese (Brazilian)
+"PT" - Portuguese (unspecified variant for backward compatibility; please select PT-PT or PT-BR instead)
+"RO" - Romanian
+"RU" - Russian
+"SK" - Slovak
+"SL" - Slovenian
+"SV" - Swedish
+"ZH" - Chinese
+
 -----
 
 If you are new to Delphi and the Pascal language, take advantage of the Academic (for students, teachers and educational institutions) or Community Edition (free for personal use) versions available from Embarcadero :
@@ -41,8 +103,8 @@ https://www.embarcadero.com/products/delphi
 Cette formation en ligne gratuite vous apprendra les bases de la programmation avec le Pascal et Delphi même si vous n'avez jamais appris à programmer :
 https://apprendre-delphi.fr/apprendre-la-programmation-avec-delphi/
 
-Retrouvez les rediffusions de mes conférences en ligne et webinaires depuis la page https://developpeur-pascal.fr/p/_6007-webinaires.html
+Des conférences en ligne et des webinaires (points techniques sur des sujets précis) sont organisés régulièrement. Consultez [le planning de ces webinaires](https://developpeur-pascal.fr/p/_6007-webinaires.html) et regardez les [rediffusions des webinaires Delphi](https://serialstreameur.fr/webinaires-delphi.php).
 
-Des sessions de codage Delphi en direct sont organisées tous les jeudi à 14 heures (heure de Paris, France). Rejoignez moi sur https://www.twitch.tv/patrickpremartin et retrouvez le programme ou des informations complémentaires sur https://developpeur-pascal.fr/p/_600e-livestreams-de-codage-en-direct-avec-delphi.html
+Des sessions de [live coding sur Twitch](https://www.twitch.tv/patrickpremartin) ou [la chaîne YouTube Developpeur Pascal](https://www.youtube.com/channel/UCk_LmkBB90jdEdmfF77W6qQ) sont également organisées régulièrement. Pour Twitch vous pouvez consulter [le planning hebdomadaire](https://www.twitch.tv/patrickpremartin/schedule). Vous pouvez aussi vous reporter à [cet article](https://developpeur-pascal.fr/p/_600e-livestreams-de-codage-en-direct-avec-delphi.html). Pour les rediffusions de tout ça, rendez-vous simplement dans la [rubrique live coding](https://serialstreameur.fr/live-coding.php) de [Serial Streameur](https://serialstreameur.fr/) où vous trouverez de nombreuses vidéos en français à destination des développeurs de logiciels, applications mobiles, sites web et jeux vidéo.
 
-Enfin, si vous préférez la lecture à la vidéo, vous trouverez tous les livres récents publiés sur Delphi et le langage Pascal sur https://delphi-books.com/
+Enfin, si vous préférez la lecture à la vidéo, vous trouverez tous les livres récents publiés sur Delphi et le langage Pascal sur [Delphi Books](https://delphi-books.com)
