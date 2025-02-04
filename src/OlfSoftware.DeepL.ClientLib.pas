@@ -1,3 +1,45 @@
+ï»¿/// <summary>
+/// ***************************************************************************
+///
+/// DeepL API client library for Delphi
+///
+/// Copyright 2020-2024 Patrick PrÃ©martin under AGPL 3.0 license.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+/// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+/// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+/// DEALINGS IN THE SOFTWARE.
+///
+/// ***************************************************************************
+///
+/// DeepL is an online text and document translation tool, also available as
+/// software and APIs.
+///
+/// This project is a client library in Pascal for Delphi to use the main
+/// translation API. Examples of use are also proposed.
+///
+/// To use the API of DeepL you must have a free or paid account.
+///
+/// ***************************************************************************
+///
+/// Author(s) :
+///      Patrick PREMARTIN
+///
+/// Site :
+///      https://deepl4delphi.developpeur-pascal.fr
+///
+/// Project site :
+///      https://github.com/DeveloppeurPascal/DeepL4Delphi
+///
+/// ***************************************************************************
+/// File last update : 04/08/2024 07:56:16
+/// Signature : dc624178028740235135fa88f275713da3713fcb
+/// ***************************************************************************
+/// </summary>
+
 unit OlfSoftware.DeepL.ClientLib;
 
 interface
@@ -62,6 +104,16 @@ procedure DeepLTranslateTextASync(auth_key, source_lang, target_lang,
   split_sentences: string = '1'; preserve_formatting: string = '0';
   formality: string = 'default'); overload;
 
+const
+  CDeepLAPIURL_Free = 'https://api-free.deepl.com';
+  CDeepLAPIURL_Pro = 'https://api.deepl.com';
+
+  /// <summary>
+  /// Call to initialize DeepL API URL.
+  /// If you forget to do, you will be on Free API.
+  /// </summary>
+procedure DeepLSetAPIURL(APIURL: string = CDeepLAPIURL_Free);
+
 implementation
 
 // TODO : (add global parameter) choose if result text with error is empty or equal original text
@@ -73,6 +125,9 @@ uses
     , System.Threading
 {$ENDIF}
     ;
+
+var
+  DeepLAPIURL: string;
 
 function DeepLTranslateTextSync(auth_key, source_lang, target_lang,
   text: string; split_sentences: string; preserve_formatting: string;
@@ -102,10 +157,7 @@ begin
       Params.AddPair('split_sentences', split_sentences);
       Params.AddPair('preserve_formatting', preserve_formatting);
       Params.AddPair('formality', formality);
-      APIResponse := APIServer.Post
-        ('https://api.deepl.com/v2/translate', Params);
-// TODO : changement URL si utilisation API gratuite => à paramétrer avec la clé d'API
-// ('https://api-free.deepl.com/v2/translate', Params);
+      APIResponse := APIServer.Post(DeepLAPIURL + '/v2/translate', Params);
     finally
       Params.free;
     end;
@@ -278,5 +330,16 @@ begin
           ErrorText);
     end, split_sentences, preserve_formatting, formality);
 end;
+
+procedure DeepLSetAPIURL(APIURL: string);
+begin
+  if (APIURL.Trim.IsEmpty) then
+    raise exception.Create('Please give the DeepL API URL.');
+  DeepLAPIURL := APIURL;
+end;
+
+initialization
+
+DeepLSetAPIURL(CDeepLAPIURL_Free);
 
 end.

@@ -1,110 +1,88 @@
-# Delphi client for DeepL API
+# DeepL API client library for Delphi
 
-## in english
+[Cette page en français.](LISEZMOI.md)
 
-Delphi library and sample projects for using the translation API provided by DeepL.com
+[DeepL](https://www.deepl.com/) is an online text and document translation tool, also available as software and APIs.
 
-DeepL is an online translation tool available at https://www.deepl.com/
+This project is a client library in Pascal for Delphi to use the main translation API. Examples of use are also proposed.
 
-With a developper access available at https://www.deepl.com/pro#developer we can integrate translation functionalities in our projects.
+To use [the API of DeepL](https://www.deepl.com/pro-api) you must have a free or paid account.
 
-This repository contains library and sample projects for Delphi users. To use it you need an account and an API key from DeepL.
+This code repository contains a project developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
-## Managed languages
+## Talks and conferences
 
-According to https://www.deepl.com/docs-api/translating-text/ then From / To languages are :
+### Online talks
 
-### Source languages
+* [Internationaliser les projets VCL / FMX](https://serialstreameur.fr/webinaire-20200625.php) (in French)
 
-"BG" - Bulgarian
-"CS" - Czech
-"DA" - Danish
-"DE" - German
-"EL" - Greek
-"EN" - English
-"ES" - Spanish
-"ET" - Estonian
-"FI" - Finnish
-"FR" - French
-"HU" - Hungarian
-"IT" - Italian
-"JA" - Japanese
-"LT" - Lithuanian
-"LV" - Latvian
-"NL" - Dutch
-"PL" - Polish
-"PT" - Portuguese (all Portuguese varieties mixed)
-"RO" - Romanian
-"RU" - Russian
-"SK" - Slovak
-"SL" - Slovenian
-"SV" - Swedish
-"ZH" - Chinese
+### DelphiCon 2023
 
-### Destination languages
+* [Automatically Translate Your Programs With DeepL API](https://serialstreameur.fr/automatically-translate-your-programs-with-deepl-api.html) (in English)
+* [Traduire automatiquement ses logiciels avec DeepL et WebBroker](https://serialstreameur.fr/traduire-automatiquement-ses-logiciels-avec-deepl-et-webbroker.html) (in French)
 
-"BG" - Bulgarian
-"CS" - Czech
-"DA" - Danish
-"DE" - German
-"EL" - Greek
-"EN-GB" - English (British)
-"EN-US" - English (American)
-"EN" - English (unspecified variant for backward compatibility; please select EN-GB or EN-US instead)
-"ES" - Spanish
-"ET" - Estonian
-"FI" - Finnish
-"FR" - French
-"HU" - Hungarian
-"IT" - Italian
-"JA" - Japanese
-"LT" - Lithuanian
-"LV" - Latvian
-"NL" - Dutch
-"PL" - Polish
-"PT-PT" - Portuguese (all Portuguese varieties excluding Brazilian Portuguese)
-"PT-BR" - Portuguese (Brazilian)
-"PT" - Portuguese (unspecified variant for backward compatibility; please select PT-PT or PT-BR instead)
-"RO" - Romanian
-"RU" - Russian
-"SK" - Slovak
-"SL" - Slovenian
-"SV" - Swedish
-"ZH" - Chinese
+### Twitch
 
------
+Follow my development streams of software, video games, mobile applications and websites on [my Twitch channel](https://www.twitch.tv/patrickpremartin) or as replays on [Serial Streameur](https://serialstreameur.fr/) mostly in French.
 
-If you are new to Delphi and the Pascal language, take advantage of the Academic (for students, teachers and educational institutions) or Community Edition (free for personal use) versions available from Embarcadero :
-https://www.embarcadero.com/products/delphi
+* [Sortie de Delphi 10.4.2 Sydney puis codage d'une librairie pour utiliser l'API De traduction de DeepL](https://serialstreameur.fr/live-coding-20210225.php) (in French, 02/25/2021)
+* [Codage en Delphi autour de DeepL et des services web](https://serialstreameur.fr/live-coding-20220121.php) (in French, 01/21/2022)
 
-This free online training will teach you the basics of programming with Pascal and Delphi :
-https://apprendre-delphi.fr/apprendre-la-programmation-avec-delphi/
+## Languages supported by the Translation API
 
-Find reruns of my online conferences / webinars (in french) from the https://developpeur-pascal.fr/p/_6007-webinaires.html page.
+Check [this page](https://www.deepl.com/docs-api/translating-text/) from the translate API documentation to see the list of supported languages.
 
-Finally, if you prefer reading to video, you can find all the recent books published about Delphi and the Pascal language at https://delphi-books.com/.
+## Source code installation
 
-## en français
+To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its GitHub repository](https://github.com/DeveloppeurPascal/DeepL4Delphi).
 
-Bibliothèque Delphi et exemples de projets pour l'utilisation de l'API de traduction fournis par DeepL.com
+The project's technical documentation, generated with [DocInsight](https://devjetsoftware.com/products/documentation-insight/), is available in the ./docs folder and on [GitHub Pages](https://developpeurpascal.github.io/DeepL4Delphi). Further information and related links are available on [the project website](https://deepl4delphi.developpeur-pascal.fr).
 
-DeepL est un outil de traduction en ligne disponible sur https://www.deepl.com/
+If you need explanations or help in using this project in your own, please [contact me](https://developpeur-pascal.fr/nous-contacter.php). I can either direct you to an online resource, or offer you assistance on a fee-for-service basis. You can also contact me at a conference or an online presentation.
 
-Avec un accès développeur disponible sur https://www.deepl.com/pro#developer nous pouvons intégrer des fonctionnalités de traduction dans nos projets.
+## Compatibility
 
-Ce dépôt contient une bibliothèque et des exemples de projets pour les utilisateurs de Delphi. Pour l'utiliser, vous avez besoin d'un compte et d'une clé API de DeepL.
+As an [Embarcadero MVP](https://www.embarcadero.com/resources/partners/mvp-directory), I benefit from the latest versions of [Delphi](https://www.embarcadero.com/products/delphi) and [C++ Builder](https://www.embarcadero.com/products/cbuilder) in [RAD Studio](https://www.embarcadero.com/products/rad-studio) as soon as they are released. I therefore work with these versions.
 
------
+Normally, my libraries and components should also run on at least the current version of [Delphi Community Edition](https://www.embarcadero.com/products/delphi/starter).
 
-Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
-En entreprise vous pouvez aussi tester Delphi avec la version d'évaluation.
-https://www.embarcadero.com/products/delphi
+There's no guarantee of compatibility with earlier versions, even though I try to keep my code clean and avoid using too many of the new ways of writing in it (type inference, inline var and multiline strings).
 
-Cette formation en ligne gratuite vous apprendra les bases de la programmation avec le Pascal et Delphi même si vous n'avez jamais appris à programmer :
-https://apprendre-delphi.fr/apprendre-la-programmation-avec-delphi/
+If you detect any anomalies on earlier versions, please don't hesitate to [report them](https://github.com/DeveloppeurPascal/DeepL4Delphi/issues) so that I can test and try to correct or provide a workaround.
 
-Des conférences en ligne et des webinaires (points techniques sur des sujets précis) sont organisés régulièrement. Consultez [le planning de ces webinaires](https://developpeur-pascal.fr/p/_6007-webinaires.html) et regardez les [rediffusions des webinaires Delphi](https://serialstreameur.fr/webinaires-delphi.php).
+## License to use this code repository and its contents
 
-Des sessions de [live coding sur Twitch](https://www.twitch.tv/patrickpremartin) ou [la chaîne YouTube Developpeur Pascal](https://www.youtube.com/channel/UCk_LmkBB90jdEdmfF77W6qQ) sont également organisées régulièrement. Pour Twitch vous pouvez consulter [le planning hebdomadaire](https://www.twitch.tv/patrickpremartin/schedule). Vous pouvez aussi vous reporter à [cet article](https://developpeur-pascal.fr/p/_600e-livestreams-de-codage-en-direct-avec-delphi.html). Pour les rediffusions de tout ça, rendez-vous simplement dans la [rubrique live coding](https://serialstreameur.fr/live-coding.php) de [Serial Streameur](https://serialstreameur.fr/) où vous trouverez de nombreuses vidéos en français à destination des développeurs de logiciels, applications mobiles, sites web et jeux vidéo.
+This source code is distributed under the [AGPL 3.0 or later](https://choosealicense.com/licenses/agpl-3.0/) license.
 
-Enfin, si vous préférez la lecture à la vidéo, vous trouverez tous les livres récents publiés sur Delphi et le langage Pascal sur [Delphi Books](https://delphi-books.com)
+You are free to use the contents of this code repository anywhere provided :
+* you mention it in your projects
+* distribute the modifications made to the files provided in this AGPL-licensed project (leaving the original copyright notices (author, link to this repository, license) must be supplemented by your own)
+* to distribute the source code of your creations under the AGPL license.
+
+If this license doesn't suit your needs (especially for a commercial project) I also offer [classic licenses for developers and companies](https://deepl4delphi.developpeur-pascal.fr).
+
+Some elements included in this repository may depend on third-party usage rights (images, sounds, etc.). They are not reusable in your projects unless otherwise stated.
+
+The source codes of this code repository as well as any compiled version are provided “as is” without warranty of any kind.
+
+## How to ask a new feature, report a bug or a security issue ?
+
+If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/DeepL4Delphi) and [open a new issue](https://github.com/DeveloppeurPascal/DeepL4Delphi/issues).
+
+If you found a security issue please don't report it publicly before a patch is available. Explain the case by [sending a private message to the author](https://developpeur-pascal.fr/nous-contacter.php).
+
+You also can fork the repository and contribute by submitting pull requests if you want to help. Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Support the project and its author
+
+If you think this project is useful and want to support it, please make a donation to [its author](https://github.com/DeveloppeurPascal). It will help to maintain the code and binaries.
+
+You can use one of those services :
+
+* [GitHub Sponsors](https://github.com/sponsors/DeveloppeurPascal)
+* Ko-fi [in French](https://ko-fi.com/patrick_premartin_fr) or [in English](https://ko-fi.com/patrick_premartin_en)
+* [Patreon](https://www.patreon.com/patrickpremartin)
+* [Liberapay](https://liberapay.com/PatrickPremartin)
+* [Paypal](https://www.paypal.com/paypalme/patrickpremartin)
+
+or if you speack french you can [subscribe to Zone Abo](https://zone-abo.fr/nos-abonnements.php) on a monthly or yearly basis and get a lot of resources as videos and articles.
